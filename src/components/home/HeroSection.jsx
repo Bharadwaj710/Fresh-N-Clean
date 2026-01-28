@@ -40,13 +40,14 @@ const HeroSection = () => {
       }}
     >
       {/* Base Gradient - Immediate load for warmth */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="absolute inset-0 z-[-2] pointer-events-none"
         style={{
-          background: "radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.03) 0%, transparent 50%)"
+          background:
+            "radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.03) 0%, transparent 50%)",
         }}
       />
 
@@ -58,7 +59,7 @@ const HeroSection = () => {
         <WaterDroplets />
       </div>
       <SectionWrapper className="relative z-20 h-full" showCurve={false}>
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start md:items-center">
           {/* LEFT: Content */}
           <div className="flex flex-col items-start gap-8">
             <motion.div
@@ -70,19 +71,34 @@ const HeroSection = () => {
                 delay: 0.2,
               }}
             >
-              <h1 className="text-5xl md:text-[5rem] font-bold text-text-dark leading-[1.05] tracking-tight mb-8 drop-shadow-sm">
+              <h1
+                className="text-5xl md:text-[5rem] font-bold text-text-dark leading-[1.05] tracking-tight mb-8 drop-shadow-sm"
+                style={{
+                  color: "rgba(31,41,55,0.99)",
+                  textShadow: "0 1px 0 #fff, 0 2px 8px #e0e7ef",
+                }}
+              >
                 Fresh{" "}
                 <span className="relative">
                   Clothes.
                   <span className="absolute -bottom-2 left-0 w-full h-[6px] bg-primary/10 rounded-full" />
                 </span>
                 <br />
-                <span className="text-primary font-extrabold">
+                <span
+                  className="text-primary font-extrabold"
+                  style={{ textShadow: "0 1px 0 #fff, 0 2px 8px #b8d0fa" }}
+                >
                   Professional Care.
                 </span>
               </h1>
 
-              <p className="text-lg md:text-2xl text-text-muted max-w-lg leading-relaxed font-light mb-10">
+              <p
+                className="text-lg md:text-2xl text-text-muted max-w-lg leading-relaxed font-light mb-10"
+                style={{
+                  color: "rgba(55,65,81,0.98)",
+                  textShadow: "0 1px 0 #fff, 0 2px 8px #e0e7ef",
+                }}
+              >
                 Cleaned with precision, handled with care, and delivered with
                 trust.
               </p>
@@ -109,8 +125,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            className="relative w-full aspect-[4/5] md:aspect-square rounded-[3rem] overflow-hidden shadow-2xl shadow-blue-900/10 bg-slate-900"
-            style={{ marginTop: "-3rem", zIndex: 15 }}
+            className="relative w-full aspect-[4/5] md:aspect-square rounded-[3rem] overflow-hidden shadow-2xl shadow-blue-900/10 bg-slate-900 z-20 md:z-[15] md:mt-[-3rem]"
           >
             <AnimatePresence>
               {[
